@@ -1,0 +1,102 @@
+<?xml version="1.0" ?>
+<DOC>
+  <METADATA>
+    <TITLE>An Nam Chí Lược - Trích tuyển NER</TITLE>
+    <AUTHOR>Lê Tắc</AUTHOR>
+    <LANGUAGE>Vietnamese</LANGUAGE>
+  </METADATA>
+  <BODY>
+    <STC_ID id="HBA_001.001.004.01">
+      V i ện Đ ại H ọc H u ế 
+      <ORG>Ủy Ban Phiên Dịch Sử Liệu Việt Nam</ORG>
+      <TME>1961</TME>
+       AN NAM CHÍ LƯỢC 
+      <TITLE>Soạn giả</TITLE>
+      : LÊ TẮC 
+      <TME>Thế Kỷ 14</TME>
+       (
+      <TME>1335</TME>
+      )
+    </STC_ID>
+    <STC_ID id="HBA_001.001.004.02">
+      2 
+      <LOC>An Nam</LOC>
+       Chí Lược - Tựa Tựa sách: 
+      <LOC>An Nam</LOC>
+       Chí Lược Năm 
+      <TITLE>Soạn giả</TITLE>
+      : 
+      <PER>Lê Tắc</PER>
+      <TME>1335</TME>
+      <TITLE>Dịch giả</TITLE>
+      : Ủy ban phiên dịch sử liệu Việt Nam 
+      <TME>1960</TME>
+       Nhà xuất bản: 
+      <ORG>Viện Đại Học Huế</ORG>
+      <TME>1961</TME>
+       Chuyển sang ấn bản điện tử bởi: Công Đệ, Doãn Vượng, Lê Bắc 
+      <TME>2001</TME>
+       Điều hợp: Lê Bắc - bacle@hotmail.com 
+      <TME>2001</TME>
+    </STC_ID>
+    <STC_ID id="HBA_001.001.004.03">
+      3 
+      <LOC>An Nam</LOC>
+       Chí Lược - Tựa Lời Giới Thiệu Song song với công việc biên mục Châu bản triều Nguyễn, 
+      <ORG>Ủy ban Phiên Dịch Sử Liệu Việt-Nam</ORG>
+       đã lập một kế hoạch riêng để hiệu đính và phiên dịch các bộ sử Việt Nam.
+    </STC_ID>
+    <STC_ID id="HBA_001.001.004.04">
+      Theo kế hoạch dự định ấy, các phiên dịch viên trong Ủy ban đã tham khảo các truyền bản tàng trử tại các thư viện Nhật Bản, Trung Hoa và Anh Quốc, làm xong một hiệu bản của bộ 
+      <LOC>An Nam</LOC>
+       Chí Lược và hoàn thành một bản phiên dịch Việt văn.
+    </STC_ID>
+    <STC_ID id="HBA_001.001.004.05">
+      Nói về cuốn 
+      <LOC>An Nam</LOC>
+       Chí Lược, ai ai cũng biết rõ soạn giả 
+      <PER>Lê Tắc</PER>
+       là một tên phản bội với Tổ quốc.
+    </STC_ID>
+    <STC_ID id="HBA_001.001.004.06">
+      Trong lúc nước nhà đang gặp ngoại xâm, xã tắc nguy cấp, nhân dân đau khổ, 
+      <PER>Lê Tắc</PER>
+       cùng bọn Trần Kiện và Trần Ích Tắc, không những không chịu gắn sức phấn đấu để cứu nước cứu dân, trái lại nhẩn tâm và làm tôi địch.
+    </STC_ID>
+    <STC_ID id="HBA_001.001.004.07">
+      Hơn nữa, trong bộ 
+      <LOC>An Nam</LOC>
+       Chí Lược, 
+      <PER>Lê Tắc</PER>
+       quên mình là người Việt, dựa vào lập trường và 
+      <TITLE>quan</TITLE>
+       điểm người Nguyên để soạn tập.
+    </STC_ID>
+    <STC_ID id="HBA_001.001.004.08">Chẳng hạn, như những lời nịnh nọt a dua của soạn giả, những đoạn văn kiêu ngạo tự tôn tự đại trình bày trong các chiếu chỉ nhà Nguyên và trong các bài tựa các danh nhân hồi ấy, đều khiến cho chúng ta vô cùng uất ức và đau đớn.</STC_ID>
+    <STC_ID id="HBA_001.001.004.09">
+      Sở dĩ Ủy ban lấy bộ 
+      <LOC>An Nam</LOC>
+       Chí Lược làm công việc phiên dịch đầu tiên, là vì bộ ấy có lẽ là bộ sử xưa nhất do một cá nhân người Việt soạn ra, và gồm có nhiều sử liệu đáng quý có liên 
+      <TITLE>quan</TITLE>
+       đến cổ sử và trung sử Việt Nam, chứ không phải Ủy ban có chút định nào dung thứ những hành động và 
+      <TITLE>quan</TITLE>
+       niệm sai lầm của soạn giả đối với tổ quốc.
+    </STC_ID>
+    <STC_ID id="HBA_001.001.004.10">Nói khác, chúng tôi coi cuốn sách này là một sử liệu, là một đối tượng cho cuộc nghiên cứu sử học thuần túy, bởi vậy, thành thực muốn cung cấp một bộ hiệu bản và bản dịch đáng tin cậy cho học giới mà thôi.</STC_ID>
+    <STC_ID id="HBA_001.001.004.11">Trong hai nghìn năm quốc sử, chúng ta không thể không công nhận rằng còn nhiều chỗ thiếu sót, mơ hồ, đang chờ đợi sự cố gắng của sử gia Việt Nam, để bổ túc hoặc xác định lại.</STC_ID>
+    <STC_ID id="HBA_001.001.004.12">Vậy, điều cần thiết cho nền sử học Việt Nam ngày nay là gây phong trào nghiên cứu theo phương pháp khoa học, nhất là về phương diện sưu tầm và khảo đính sử liệu, chúng ta nên tìm cách nâng đỡ và xúc tiến.</STC_ID>
+    <STC_ID id="HBA_001.001.004.13">
+      Căn cứ vào 
+      <TITLE>quan</TITLE>
+       điểm ấy, tôi thành thực tin rằng bộ hiệu bản và bản dịch này là một thực hiện mới của nền sử học tại Việt Nam, và sẽ đem lại rất nhiều bổ ích cho công việc tìm tòi sự thực trong quốc sử.
+    </STC_ID>
+    <STC_ID id="HBA_001.001.004.14">
+      Huế, ngày 22 tháng 4 năm 
+      <TME>1960</TME>
+       Viện Trưởng 
+      <ORG>Viện Đại Học Huế</ORG>
+       L.
+    </STC_ID>
+    <STC_ID id="HBA_001.001.004.15">Cao Văn Luận</STC_ID>
+  </BODY>
+</DOC>

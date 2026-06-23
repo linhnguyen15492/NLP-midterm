@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<DOC>
+  <METADATA>
+    <TITLE>An Nam Chí Lược - Dóng Hàng Dịch Nghĩa</TITLE>
+    <LANGUAGE>Bilingual Hán-Việt</LANGUAGE>
+  </METADATA>
+  <BODY>
+    <STC_ID id="HBA_001.001.004.01">
+      <C>自古安南通交中國</C>
+      <V>4 An Nam Chí Lược - Quyển Đệ Nhất A n - N a m C h í - L ư ợc Quyển Đệ Nhất Cổ-Ái Đông-Sơn Lê-Tắc Biên Tống Tự Từ xưa nước An-Nam thông giao với Trung-Quốc, thời vua Chuyên-Húc, phía bắc đi tới U-Lăng, phía nam đi tới Giao-Chỉ.</V>
+      <CONFIDENCE>0.234</CONFIDENCE>
+    </STC_ID>
+    <STC_ID id="HBA_001.001.004.02">
+      <C>撰者黎崱</C>
+      <V>Nói về cuốn An Nam Chí Lược, ai ai cũng biết rõ soạn giả Lê Tắc là một tên phản bội với Tổ quốc.</V>
+      <CONFIDENCE>0.160</CONFIDENCE>
+    </STC_ID>
+    <STC_ID id="HBA_001.001.004.03">
+      <C>書安南志略</C>
+      <V>5 An Nam Chí Lược - Quyển Đệ Nhất Năm Kiến-An thứ 15 (210), Hiến-Đế dời chỗ cai trị qua quận Nam-Hải.</V>
+      <CONFIDENCE>0.087</CONFIDENCE>
+    </STC_ID>
+  </BODY>
+</DOC>

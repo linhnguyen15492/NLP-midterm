@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<DOC>
+  <METADATA>
+    <TITLE>An Nam Chí Lược - OCR Character Alignment</TITLE>
+  </METADATA>
+  <BODY>
+    <STC_ID id="HBA_001.001.004.01">
+      <BBOXES>
+        <BBOX char="黎" orig_char="黎" status="red" xmin="200" ymin="10" xmax="240" ymax="48"/>
+        <BBOX char="榥" orig_char="榥" status="red" xmin="198" ymin="55" xmax="238" ymax="95"/>
+        <BBOX char="山" orig_char="山" status="red" xmin="100" ymin="15" xmax="140" ymax="50"/>
+        <BBOX char="河" orig_char="河" status="red" xmin="98" ymin="60" xmax="138" ymax="100"/>
+      </BBOXES>
+    </STC_ID>
+  </BODY>
+</DOC>

@@ -1,0 +1,36 @@
+<root>
+    <FILE ID="PKS_001">   
+         <!--FILE_ID: Mã PKS_001 này sẽ được T cung cấp. 
+           Ở đây "PKS" để chỉ tác phẩm này thuộc lĩnh vực Triết học, Khổng giáo, dạng txt, cổ đại. 
+           Còn số 001 để chỉ tác phẩm "Đại Học" trong bộ Tứ thư-->
+        <meta>
+            <TITLE>Đại học</TITLE>
+            <VOLUME>Tứ thư</VOLUME>
+            <AUTHOR>Tăng Tử</AUTHOR>
+            <PERIOD>Chiến Quốc</PERIOD>
+            <LANGUAGE>Hán-Việt</LANGUAGE>
+            <TRANSLATOR>Trần Trọng Sâm</TRANSLATOR>
+            <SOURCE>ctext.org</SOURCE>
+        </meta> 
+       
+        <SECT ID="PKS_001.001"  NAME ="Thánh Kinh" >  
+             <!--SECT_ID: Phần 1: Thánh Kinh.  Đây là số #phần/chương (section) trong FILE-->
+        
+            <PAGE ID="PKS_001.001.001">
+            <!--PAGE ID: 
+            - Đối với ngữ liệu thô là dạng ẢNH (image cần OCR), thì PAGE_ID sẽ là số #trang
+            - Đối với ngữ liệu thô là dạng VĂN BẢN (txt), thì PAGE_ID sẽ là số #đoạn (paragraph)-->
+                                    
+                <STC ID="PKS_001.001.001.01">  <!--STC_ID: Cặp câu đầu tiên (01)-->
+                    <C>大學之道，在明明德，在親民，在止於至善。</C>
+                    <V>Đạo học lớn cốt để phát huy đức sáng, giúp dân đổi mới và đạt đến mức thiện tối cao.</V>
+                </STC>
+  
+                <STC ID="PKS_001.001.001.02">  <!--STC_ID: Cặp câu thứ hai (02)-->
+                    <C>知止而後有定，定而後能靜，靜而後能安。</C>
+                    <V>Biết chỗ dừng rồi thì mới có sự vững chắc, vững chắc rồi mới yên ổn.</V>
+                </STC>
+            </PAGE>
+        </SECT>
+    </FILE>
+</root>
