@@ -1,0 +1,15 @@
+[project]
+name = "nlp-midterm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pymupdf>=1.24.10",
+    "pytesseract>=0.3.13",
+    "pillow>=10.4.0",
+    "rapidfuzz>=3.9.7",
+    "pandas>=2.2.3",
+    "openpyxl>=3.1.5",
+    "lxml>=5.3.0",
+]
