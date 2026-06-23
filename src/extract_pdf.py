@@ -1,10 +1,13 @@
-import fitz  # pymupdf
+import fitz
 
-doc = fitz.open("data\\raw\\An_Nam_Chi_Luoc.pdf")
-text = ""
 
-for page in doc:
-    text += page.get_text()
+def extract_text(pdf_path):
 
-with open("data\\raw\\raw.txt", "w", encoding="utf-8") as f:
-    f.write(text)
+    doc = fitz.open(pdf_path)
+
+    text = ""
+
+    for page in doc:
+        text += page.get_text()
+
+    return text

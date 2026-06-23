@@ -12,5 +12,11 @@ dependencies = [
     "pandas>=2.2.3",
     "openpyxl>=3.1.5",
     "lxml>=5.3.0",
+    "underthesea>=9.5.0",
+    "sentence-transformers>=5.6.0",
+    "tqdm>=4.68.3",
+    "scikit-learn>=1.9.0",
+    "numpy>=2.5.0",
+    "paddlepaddle>=3.3.1",
 ]
 
