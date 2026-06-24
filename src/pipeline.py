@@ -1,14 +1,14 @@
 from extract_pdf import extract_text
-from clean_text import clean_vietnamese
-from sentence_split import split_vietnamese
+from clean_text import *
+from sentence_split import *
 
-text = extract_text("data\\raw\\An_Nam_Chi_Luoc.pdf")
+path = "data/raw/An_Nam_Chi_Luoc.pdf"
 
-cleaned_text = clean_vietnamese(text)
+raw_text = extract_text(path)
 
-sentences = split_vietnamese(cleaned_text)
+clean_text = clean_vietnamese_text(raw_text)
 
-print("Number of sentences:", len(sentences))
-print("First 5 sentences:")
-for i in range(min(5, len(sentences))):
+sentences = split_vietnamese_sentences(clean_text)
+
+for i in range(len(sentences)):
     print(f"{i + 1}: {sentences[i]}")
