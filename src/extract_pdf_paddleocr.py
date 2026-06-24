@@ -8,7 +8,6 @@ from typing import Any
 
 import pymupdf  # PyMuPDF
 
-
 if sys.platform.startswith("win"):
     sys.stdout.reconfigure(encoding="utf-8")
     sys.stderr.reconfigure(encoding="utf-8")
@@ -67,7 +66,12 @@ def extract_render_stage(
                 }
             )
 
-        return {"source_pdf": str(pdf_path), "page_count": total_pages, "dpi": dpi, "pages": pages}
+        return {
+            "source_pdf": str(pdf_path),
+            "page_count": total_pages,
+            "dpi": dpi,
+            "pages": pages,
+        }
     finally:
         doc.close()
 
@@ -114,7 +118,12 @@ def ocr_pages_stage(
             "FLAGS_enable_pir_in_executor": False,
         }
         # paddle.set_flags expects {str: bool/int}
-        paddle.set_flags({k: int(v) if isinstance(v, bool) else v for k, v in flag_candidates.items()})
+        paddle.set_flags(
+            {
+                k: int(v) if isinstance(v, bool) else v
+                for k, v in flag_candidates.items()
+            }
+        )
     except Exception:
         pass
 
@@ -202,17 +211,33 @@ def ocr_pages_stage(
                     continue
                 poly = item[0]
                 txt_conf = item[1]
-                text = txt_conf[0] if isinstance(txt_conf, (list, tuple)) and len(txt_conf) > 0 else ""
-                conf = txt_conf[1] if isinstance(txt_conf, (list, tuple)) and len(txt_conf) > 1 else None
+                text = (
+                    txt_conf[0]
+                    if isinstance(txt_conf, (list, tuple)) and len(txt_conf) > 0
+                    else ""
+                )
+                conf = (
+                    txt_conf[1]
+                    if isinstance(txt_conf, (list, tuple)) and len(txt_conf) > 1
+                    else None
+                )
                 if not text:
                     continue
                 try:
                     poly_f = [[float(x), float(y)] for x, y in poly]
                 except Exception:
                     poly_f = []
-                lines.append(OcrLine(text=str(text), conf=float(conf) if conf is not None else None, poly=poly_f))
+                lines.append(
+                    OcrLine(
+                        text=str(text),
+                        conf=float(conf) if conf is not None else None,
+                        poly=poly_f,
+                    )
+                )
 
-        pages_out.append({"page": page_no, "page_png": img_path, "lines": [asdict(l) for l in lines]})
+        pages_out.append(
+            {"page": page_no, "page_png": img_path, "lines": [asdict(l) for l in lines]}
+        )
 
     return {
         "source_pdf": render_manifest.get("source_pdf"),

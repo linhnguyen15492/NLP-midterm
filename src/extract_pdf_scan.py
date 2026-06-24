@@ -9,7 +9,6 @@ from typing import Any
 
 import pymupdf  # PyMuPDF
 
-
 if sys.platform.startswith("win"):
     # Avoid mojibake when printing Vietnamese paths/text on Windows consoles.
     sys.stdout.reconfigure(encoding="utf-8")
@@ -116,10 +115,26 @@ def extract_page_images(
                         width=int(block.get("width", 0) or 0),
                         height=int(block.get("height", 0) or 0),
                         ext=ext,
-                        xres=int(block.get("xres")) if block.get("xres") is not None else None,
-                        yres=int(block.get("yres")) if block.get("yres") is not None else None,
-                        bpc=int(block.get("bpc")) if block.get("bpc") is not None else None,
-                        colorspace=str(block.get("colorspace")) if block.get("colorspace") is not None else None,
+                        xres=(
+                            int(block.get("xres"))
+                            if block.get("xres") is not None
+                            else None
+                        ),
+                        yres=(
+                            int(block.get("yres"))
+                            if block.get("yres") is not None
+                            else None
+                        ),
+                        bpc=(
+                            int(block.get("bpc"))
+                            if block.get("bpc") is not None
+                            else None
+                        ),
+                        colorspace=(
+                            str(block.get("colorspace"))
+                            if block.get("colorspace") is not None
+                            else None
+                        ),
                         size=int(block.get("size", len(img_bytes)) or len(img_bytes)),
                         sha1=sha1,
                         path=str(out_path),
@@ -145,5 +160,6 @@ def extract_page_images(
 def write_manifest(manifest: dict[str, Any], out_json: Path) -> None:
     out_json = Path(out_json)
     out_json.parent.mkdir(parents=True, exist_ok=True)
-    out_json.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
-
+    out_json.write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
+    )

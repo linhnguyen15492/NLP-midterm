@@ -31,14 +31,21 @@ def ocr_page_words(image_path: Path, *, lang: str = "vie") -> dict[str, Any]:
         raise RuntimeError("tesseract executable not found in PATH.")
 
     with Image.open(image_path) as img:
-        data = pytesseract.image_to_data(img, lang=lang, output_type=pytesseract.Output.DICT)
+        data = pytesseract.image_to_data(
+            img, lang=lang, output_type=pytesseract.Output.DICT
+        )
     words: list[dict[str, Any]] = []
     n = len(data.get("text", []))
     for i in range(n):
         text = (data["text"][i] or "").strip()
         if not text:
             continue
-        x, y, w, h = data["left"][i], data["top"][i], data["width"][i], data["height"][i]
+        x, y, w, h = (
+            data["left"][i],
+            data["top"][i],
+            data["width"][i],
+            data["height"][i],
+        )
         conf_raw = str(data.get("conf", [""])[i]).strip()
         conf = None
         if conf_raw and conf_raw != "-1":
@@ -46,7 +53,13 @@ def ocr_page_words(image_path: Path, *, lang: str = "vie") -> dict[str, Any]:
                 conf = float(conf_raw)
             except ValueError:
                 conf = None
-        words.append({"text": text, "bbox": [float(x), float(y), float(x + w), float(y + h)], "conf": conf})
+        words.append(
+            {
+                "text": text,
+                "bbox": [float(x), float(y), float(x + w), float(y + h)],
+                "conf": conf,
+            }
+        )
 
     return {"engine": "tesseract", "lang": lang, "words": words}
 
@@ -64,5 +77,7 @@ def apply_ocr_to_manifest(manifest_path: Path, *, lang: str = "vie") -> Path:
         page["ocr"] = ocr_page_words(png_path, lang=lang)
 
     out_path = manifest_path.with_suffix(".ocr.json")
-    out_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    out_path.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
     return out_path

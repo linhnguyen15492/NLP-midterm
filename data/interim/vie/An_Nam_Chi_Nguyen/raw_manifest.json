@@ -1,7 +1,7 @@
 {
   "source_pdf": "data\\vie\\An_Nam_Chi_Nguyen.pdf",
   "page_count": 582,
-  "dpi": 200,
+  "dpi": 400,
   "pages": [
     {
       "page": 1,
@@ -172,6 +172,161 @@
           "size": 78840,
           "sha1": "76585bad6884ea2d43a024d1ee739ebad07ab69c",
           "path": "data\\interim\\vie\\An_Nam_Chi_Nguyen\\embedded\\p0005_b000_76585bad68.png"
+        }
+      ],
+      "has_text_layer": false,
+      "ocr": null
+    },
+    {
+      "page": 6,
+      "page_size": [
+        402.8500061035156,
+        646.2000122070312
+      ],
+      "page_png": "data\\interim\\vie\\An_Nam_Chi_Nguyen\\pages\\p0006.png",
+      "embedded_images": [
+        {
+          "block_no": 0,
+          "bbox": [
+            0.0,
+            0.0,
+            402.8500061035156,
+            646.2000122070312
+          ],
+          "width": 3357,
+          "height": 5385,
+          "ext": "png",
+          "xres": 96,
+          "yres": 96,
+          "bpc": 1,
+          "colorspace": "1",
+          "size": 97882,
+          "sha1": "a6dcd087019577078b52b390359d28d11b776e1c",
+          "path": "data\\interim\\vie\\An_Nam_Chi_Nguyen\\embedded\\p0006_b000_a6dcd08701.png"
+        }
+      ],
+      "has_text_layer": false,
+      "ocr": null
+    },
+    {
+      "page": 7,
+      "page_size": [
+        402.8500061035156,
+        646.2000122070312
+      ],
+      "page_png": "data\\interim\\vie\\An_Nam_Chi_Nguyen\\pages\\p0007.png",
+      "embedded_images": [
+        {
+          "block_no": 0,
+          "bbox": [
+            0.0,
+            0.0,
+            402.8500061035156,
+            646.2000122070312
+          ],
+          "width": 3357,
+          "height": 5385,
+          "ext": "png",
+          "xres": 96,
+          "yres": 96,
+          "bpc": 1,
+          "colorspace": "1",
+          "size": 183450,
+          "sha1": "eefe00ec22fc2d7dc1356d04e4d4f61d3926a6bc",
+          "path": "data\\interim\\vie\\An_Nam_Chi_Nguyen\\embedded\\p0007_b000_eefe00ec22.png"
+        }
+      ],
+      "has_text_layer": false,
+      "ocr": null
+    },
+    {
+      "page": 8,
+      "page_size": [
+        402.8500061035156,
+        646.2000122070312
+      ],
+      "page_png": "data\\interim\\vie\\An_Nam_Chi_Nguyen\\pages\\p0008.png",
+      "embedded_images": [
+        {
+          "block_no": 0,
+          "bbox": [
+            0.0,
+            0.0,
+            402.8500061035156,
+            646.2000122070312
+          ],
+          "width": 3357,
+          "height": 5385,
+          "ext": "png",
+          "xres": 96,
+          "yres": 96,
+          "bpc": 1,
+          "colorspace": "1",
+          "size": 215656,
+          "sha1": "3da4ca018154569c0b1606df1eb30eb3645997fd",
+          "path": "data\\interim\\vie\\An_Nam_Chi_Nguyen\\embedded\\p0008_b000_3da4ca0181.png"
+        }
+      ],
+      "has_text_layer": false,
+      "ocr": null
+    },
+    {
+      "page": 9,
+      "page_size": [
+        402.8500061035156,
+        646.2000122070312
+      ],
+      "page_png": "data\\interim\\vie\\An_Nam_Chi_Nguyen\\pages\\p0009.png",
+      "embedded_images": [
+        {
+          "block_no": 0,
+          "bbox": [
+            0.0,
+            0.0,
+            402.8500061035156,
+            646.2000122070312
+          ],
+          "width": 3357,
+          "height": 5385,
+          "ext": "png",
+          "xres": 96,
+          "yres": 96,
+          "bpc": 1,
+          "colorspace": "1",
+          "size": 295792,
+          "sha1": "55306515eb53686d5b272b4d0dd95196f35604b6",
+          "path": "data\\interim\\vie\\An_Nam_Chi_Nguyen\\embedded\\p0009_b000_55306515eb.png"
+        }
+      ],
+      "has_text_layer": false,
+      "ocr": null
+    },
+    {
+      "page": 10,
+      "page_size": [
+        402.8500061035156,
+        646.2000122070312
+      ],
+      "page_png": "data\\interim\\vie\\An_Nam_Chi_Nguyen\\pages\\p0010.png",
+      "embedded_images": [
+        {
+          "block_no": 0,
+          "bbox": [
+            0.0,
+            0.0,
+            402.8500061035156,
+            646.2000122070312
+          ],
+          "width": 3357,
+          "height": 5385,
+          "ext": "png",
+          "xres": 96,
+          "yres": 96,
+          "bpc": 1,
+          "colorspace": "1",
+          "size": 272043,
+          "sha1": "cefc9d6bc17d71433e90ffc0d7726c6daf6eebd1",
+          "path": "data\\interim\\vie\\An_Nam_Chi_Nguyen\\embedded\\p0010_b000_cefc9d6bc1.png"
         }
       ],
       "has_text_layer": false,

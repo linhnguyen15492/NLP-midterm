@@ -13,7 +13,6 @@ from extract_pdf_paddleocr import extract_render_stage, ocr_pages_stage, write_j
 from sentence_split import split_vietnamese_sentences
 from text_pdf_stages import STCIDBuilder, export_alignment_input
 
-
 if sys.platform.startswith("win"):
     sys.stdout.reconfigure(encoding="utf-8")
     sys.stderr.reconfigure(encoding="utf-8")
@@ -43,7 +42,9 @@ def export_viet_xml(
         if val:
             etree.SubElement(meta_el, tag).text = val
 
-    sect_el = etree.SubElement(file_el, "SECT", ID=id_builder.sect_id(), NAME=meta.get("sect_name", "MAIN"))
+    sect_el = etree.SubElement(
+        file_el, "SECT", ID=id_builder.sect_id(), NAME=meta.get("sect_name", "MAIN")
+    )
 
     by_page: dict[int, list[dict[str, Any]]] = {}
     for u in units:
@@ -56,13 +57,19 @@ def export_viet_xml(
             etree.SubElement(stc_el, "V").text = u["text"]
 
     out_xml.parent.mkdir(parents=True, exist_ok=True)
-    out_xml.write_bytes(etree.tostring(root, pretty_print=True, xml_declaration=True, encoding="utf-8"))
+    out_xml.write_bytes(
+        etree.tostring(root, pretty_print=True, xml_declaration=True, encoding="utf-8")
+    )
 
 
 def parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="OCR extractor (PaddleOCR) for Vietnamese scan/text PDFs -> 4 stages")
+    p = argparse.ArgumentParser(
+        description="OCR extractor (PaddleOCR) for Vietnamese scan/text PDFs -> 4 stages"
+    )
     p.add_argument("--pdf", type=Path, default=Path(r"data/vie/Cong_Du_Tiep_Ky_1.pdf"))
-    p.add_argument("--out-dir", type=Path, default=Path(r"output/vie/cong_du_tiep_ky_1_paddleocr"))
+    p.add_argument(
+        "--out-dir", type=Path, default=Path(r"output/vie/cong_du_tiep_ky_1_paddleocr")
+    )
     p.add_argument("--dpi", type=int, default=200)
     p.add_argument("--page-start", type=int, default=1)
     p.add_argument("--page-end", type=int, default=3)
@@ -72,7 +79,12 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--genre", type=str, default="B")
     p.add_argument("--file-num", type=int, default=2)
     p.add_argument("--chapter", type=int, default=1)
-    p.add_argument("--lang-model", type=str, default="en", help="PaddleOCR lang model (often 'en' for Latin)")
+    p.add_argument(
+        "--lang-model",
+        type=str,
+        default="en",
+        help="PaddleOCR lang model (often 'en' for Latin)",
+    )
     return p.parse_args()
 
 
@@ -118,11 +130,22 @@ def main() -> None:
         for p in s2.get("pages", []):
             page_no = int(p["page"])
             # Rebuild page text from OCR lines (order returned by OCR).
-            page_text = "\n".join((ln.get("text") or "").strip() for ln in p.get("lines", []) if (ln.get("text") or "").strip())
+            page_text = "\n".join(
+                (ln.get("text") or "").strip()
+                for ln in p.get("lines", [])
+                if (ln.get("text") or "").strip()
+            )
             cleaned = clean_vietnamese_text(page_text)
             sents = split_vietnamese_sentences(cleaned) if cleaned else []
             for idx, sent in enumerate(sents, start=1):
-                units.append({"stc_id": id_builder.stc_id(page=page_no, sentence_idx=idx), "page": page_no, "order": idx, "text": sent})
+                units.append(
+                    {
+                        "stc_id": id_builder.stc_id(page=page_no, sentence_idx=idx),
+                        "page": page_no,
+                        "order": idx,
+                        "text": sent,
+                    }
+                )
 
     s3 = {"file_id": args.file_id, "lang": "V", "units": units}
     write_json(s3, interim / "stage_03_sentences.json")
@@ -142,7 +165,9 @@ def main() -> None:
         "sect_name": "MAIN",
     }
     out_xml = final / f"{args.file_id}.xml"
-    export_viet_xml(out_xml, file_id=args.file_id, meta=meta, id_builder=id_builder, units=units)
+    export_viet_xml(
+        out_xml, file_id=args.file_id, meta=meta, id_builder=id_builder, units=units
+    )
 
     summary = {
         "pdf": str(args.pdf),
@@ -164,4 +189,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

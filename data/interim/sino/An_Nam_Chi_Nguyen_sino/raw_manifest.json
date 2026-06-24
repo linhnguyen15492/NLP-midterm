@@ -1,0 +1,162 @@
+{
+  "source_pdf": "data\\sino\\An_Nam_Chi_Nguyen_sino.pdf",
+  "page_count": 131,
+  "dpi": 400,
+  "pages": [
+    {
+      "page": 1,
+      "page_size": [
+        612.0,
+        792.0
+      ],
+      "page_png": "data\\interim\\sino\\An_Nam_Chi_Nguyen_sino\\pages\\p0001.png",
+      "embedded_images": [
+        {
+          "block_no": 0,
+          "bbox": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "width": 1275,
+          "height": 1650,
+          "ext": "jpeg",
+          "xres": 96,
+          "yres": 96,
+          "bpc": 8,
+          "colorspace": "3",
+          "size": 27944,
+          "sha1": "d6b2b284956135ac70005f84c39d0d9b354bdcae",
+          "path": "data\\interim\\sino\\An_Nam_Chi_Nguyen_sino\\embedded\\p0001_b000_d6b2b28495.jpeg"
+        }
+      ],
+      "has_text_layer": false,
+      "ocr": null
+    },
+    {
+      "page": 2,
+      "page_size": [
+        612.0,
+        792.0
+      ],
+      "page_png": "data\\interim\\sino\\An_Nam_Chi_Nguyen_sino\\pages\\p0002.png",
+      "embedded_images": [
+        {
+          "block_no": 0,
+          "bbox": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "width": 1275,
+          "height": 1650,
+          "ext": "jpeg",
+          "xres": 96,
+          "yres": 96,
+          "bpc": 8,
+          "colorspace": "3",
+          "size": 29654,
+          "sha1": "736e9ab828ccf42a9b61ddbfcd4fdd6d76c62f69",
+          "path": "data\\interim\\sino\\An_Nam_Chi_Nguyen_sino\\embedded\\p0002_b000_736e9ab828.jpeg"
+        }
+      ],
+      "has_text_layer": false,
+      "ocr": null
+    },
+    {
+      "page": 3,
+      "page_size": [
+        612.0,
+        792.0
+      ],
+      "page_png": "data\\interim\\sino\\An_Nam_Chi_Nguyen_sino\\pages\\p0003.png",
+      "embedded_images": [
+        {
+          "block_no": 0,
+          "bbox": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "width": 1275,
+          "height": 1650,
+          "ext": "jpeg",
+          "xres": 96,
+          "yres": 96,
+          "bpc": 8,
+          "colorspace": "3",
+          "size": 29649,
+          "sha1": "6650fbee2e11f191a9486fa81cc4e2ab99ac06f5",
+          "path": "data\\interim\\sino\\An_Nam_Chi_Nguyen_sino\\embedded\\p0003_b000_6650fbee2e.jpeg"
+        }
+      ],
+      "has_text_layer": false,
+      "ocr": null
+    },
+    {
+      "page": 4,
+      "page_size": [
+        612.0,
+        792.0
+      ],
+      "page_png": "data\\interim\\sino\\An_Nam_Chi_Nguyen_sino\\pages\\p0004.png",
+      "embedded_images": [
+        {
+          "block_no": 0,
+          "bbox": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "width": 1276,
+          "height": 1651,
+          "ext": "jpeg",
+          "xres": 96,
+          "yres": 96,
+          "bpc": 8,
+          "colorspace": "1",
+          "size": 65962,
+          "sha1": "9ab52a72334079902c6d003836693585e016574b",
+          "path": "data\\interim\\sino\\An_Nam_Chi_Nguyen_sino\\embedded\\p0004_b000_9ab52a7233.jpeg"
+        }
+      ],
+      "has_text_layer": false,
+      "ocr": null
+    },
+    {
+      "page": 5,
+      "page_size": [
+        612.0,
+        792.0
+      ],
+      "page_png": "data\\interim\\sino\\An_Nam_Chi_Nguyen_sino\\pages\\p0005.png",
+      "embedded_images": [
+        {
+          "block_no": 0,
+          "bbox": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "width": 1277,
+          "height": 1651,
+          "ext": "jpeg",
+          "xres": 96,
+          "yres": 96,
+          "bpc": 8,
+          "colorspace": "1",
+          "size": 54923,
+          "sha1": "9006ffa689ef776a7a39ef008298a75f72abc4c4",
+          "path": "data\\interim\\sino\\An_Nam_Chi_Nguyen_sino\\embedded\\p0005_b000_9006ffa689.jpeg"
+        }
+      ],
+      "has_text_layer": false,
+      "ocr": null
+    }
+  ]
+}

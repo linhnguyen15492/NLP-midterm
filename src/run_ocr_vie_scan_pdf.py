@@ -16,12 +16,14 @@ def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(
         description="Run OCR (Tesseract) on extracted scan-PDF page PNGs"
     )
+
     p.add_argument(
         "--manifest",
         type=Path,
         default=Path(r"data/interim/vie/An_Nam_Chi_Nguyen/raw_manifest.json"),
         help="Path to raw manifest JSON produced by run_extract_vie_scan_pdf.py",
     )
+
     p.add_argument(
         "--lang",
         type=str,
