@@ -1,5 +1,5 @@
 {
   "engine": "paddleocr",
-  "error": "RuntimeError: paddleocr is not available. Install it first (e.g. `uv pip install -p .venv paddleocr`).",
+  "error": "NotImplementedError: (Unimplemented) ConvertPirAttribute2RuntimeAttribute not support [pir::ArrayAttribute<pir::DoubleAttribute>]  (at ..\\paddle\\fluid\\framework\\new_executor\\instruction\\onednn\\onednn_instruction.cc:118)\n",
   "pages": []
 }

@@ -3,9 +3,9 @@
   "out_dir": "output\\vie\\cong_du_tiep_ky_1_paddleocr",
   "pages_requested": [
     1,
-    2
+    155
   ],
-  "ocr_error": "RuntimeError: paddleocr is not available. Install it first (e.g. `uv pip install -p .venv paddleocr`).",
+  "ocr_error": "NotImplementedError: (Unimplemented) ConvertPirAttribute2RuntimeAttribute not support [pir::ArrayAttribute<pir::DoubleAttribute>]  (at ..\\paddle\\fluid\\framework\\new_executor\\instruction\\onednn\\onednn_instruction.cc:118)\n",
   "stages": {
     "stage_01_render": "output\\vie\\cong_du_tiep_ky_1_paddleocr\\interim\\stage_01_render.json",
     "stage_02_ocr": "output\\vie\\cong_du_tiep_ky_1_paddleocr\\interim\\stage_02_ocr.json",

@@ -216,3 +216,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project artifacts / caches (OCR, models)
+.uv-cache/
+.paddlex/
+.modelscope/
+.paddle/
+.paddleocr/
+.cache/
