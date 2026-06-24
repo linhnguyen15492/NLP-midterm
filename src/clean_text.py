@@ -1,8 +1,6 @@
 import re
 from typing import List
 
-from paddle import text
-
 
 def clean_vietnamese(text):
 

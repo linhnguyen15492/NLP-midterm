@@ -1,0 +1,9 @@
+{
+  "pdf": "data\\vie\\An_Nam_Chi_Luoc.pdf",
+  "out_dir": "output\\vie\\an_nam_chi_luoc",
+  "pages": 170,
+  "sentences": 4154,
+  "xml": "output\\vie\\an_nam_chi_luoc\\final\\HVB_001.xml",
+  "interim_pages_json": "output\\vie\\an_nam_chi_luoc\\interim\\pages_text.json",
+  "interim_sentences_json": "output\\vie\\an_nam_chi_luoc\\interim\\sentences.json"
+}

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <FILE ID="HVB_002">
+    <meta>
+      <TITLE>Cong Du Tiep Ky 1</TITLE>
+      <LANGUAGE>Viet</LANGUAGE>
+      <SOURCE>data\vie\Cong_Du_Tiep_Ky_1.pdf</SOURCE>
+    </meta>
+    <SECT ID="HVB_002.001" NAME="MAIN"/>
+  </FILE>
+</root>

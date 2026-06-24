@@ -1,0 +1,17 @@
+{
+  "pdf": "data\\vie\\Cong_Du_Tiep_Ky_1.pdf",
+  "out_dir": "output\\vie\\cong_du_tiep_ky_1_paddleocr",
+  "pages_requested": [
+    1,
+    2
+  ],
+  "ocr_error": "RuntimeError: paddleocr is not available. Install it first (e.g. `uv pip install -p .venv paddleocr`).",
+  "stages": {
+    "stage_01_render": "output\\vie\\cong_du_tiep_ky_1_paddleocr\\interim\\stage_01_render.json",
+    "stage_02_ocr": "output\\vie\\cong_du_tiep_ky_1_paddleocr\\interim\\stage_02_ocr.json",
+    "stage_03_sentences": "output\\vie\\cong_du_tiep_ky_1_paddleocr\\interim\\stage_03_sentences.json",
+    "stage_04_alignment_input": "output\\vie\\cong_du_tiep_ky_1_paddleocr\\interim\\stage_04_alignment_input.json"
+  },
+  "final_xml": "output\\vie\\cong_du_tiep_ky_1_paddleocr\\final\\HVB_002.xml",
+  "units": 0
+}

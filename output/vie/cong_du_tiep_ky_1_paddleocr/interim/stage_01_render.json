@@ -1,0 +1,23 @@
+{
+  "source_pdf": "data\\vie\\Cong_Du_Tiep_Ky_1.pdf",
+  "page_count": 155,
+  "dpi": 150,
+  "pages": [
+    {
+      "page": 1,
+      "page_png": "output\\vie\\cong_du_tiep_ky_1_paddleocr\\interim\\stage_01_render\\pages\\p0001.png",
+      "page_size": [
+        424.55999755859375,
+        577.4400634765625
+      ]
+    },
+    {
+      "page": 2,
+      "page_png": "output\\vie\\cong_du_tiep_ky_1_paddleocr\\interim\\stage_01_render\\pages\\p0002.png",
+      "page_size": [
+        396.72003173828125,
+        537.1199951171875
+      ]
+    }
+  ]
+}

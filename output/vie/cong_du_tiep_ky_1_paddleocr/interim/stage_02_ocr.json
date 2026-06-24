@@ -1,0 +1,5 @@
+{
+  "engine": "paddleocr",
+  "error": "RuntimeError: paddleocr is not available. Install it first (e.g. `uv pip install -p .venv paddleocr`).",
+  "pages": []
+}

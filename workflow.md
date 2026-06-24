@@ -383,3 +383,70 @@ Khuyến nghị:
 4. Có metadata tối thiểu: `TITLE/AUTHOR/LANGUAGE/PERIOD/SOURCE` (theo mẫu).
 5. Lưu lại JSON thô + JSON alignment để khi bị lỗi có thể trace ngược đến page/bbox.
 
+---
+
+## 7) Áp dụng cho `data/vie/An_Nam_Chi_Nguyen.pdf` (PDF scan, không có text layer)
+
+Kiểm tra nhanh cho thấy file này (582 trang) không có text layer ở các trang đầu, nên cần pipeline theo hướng scan:
+
+1. Stage Extract (không OCR): render ảnh trang + trích embedded images + lưu `raw_manifest.json`.
+2. Stage OCR (tùy chọn): chạy OCR trên `pages/*.png` rồi ghi ra `raw_manifest.ocr.json` (nếu máy có `tesseract`).
+3. Stage downstream: từ `raw_manifest.ocr.json` mới split câu, gán `STC_ID`, rồi export XML theo mẫu trong `data/Sample_format/Viet_sample.xml`.
+
+### Lệnh chạy stage Extract (đã implement trong `src/`)
+
+Mặc định chạy trang 1–5 để tránh tạo ra hàng chục GB ảnh:
+
+```powershell
+.\.venv\Scripts\python.exe src\run_extract_vie_scan_pdf.py
+```
+
+Chạy full 582 trang (rất nặng, cân nhắc DPI thấp hơn hoặc chạy theo batch 1–50, 51–100, ...):
+
+```powershell
+.\.venv\Scripts\python.exe src\run_extract_vie_scan_pdf.py --page-start 1 --page-end 582 --dpi 200
+```
+
+Output trung gian sẽ nằm ở:
+
+- `data/interim/vie/An_Nam_Chi_Nguyen/pages/p0001.png` ... (ảnh render từng trang)
+- `data/interim/vie/An_Nam_Chi_Nguyen/embedded/*` (ảnh embedded nguyên bản)
+- `data/interim/vie/An_Nam_Chi_Nguyen/raw_manifest.json` (manifest JSON thô)
+
+### Lệnh chạy stage OCR (Tesseract, nếu đã cài)
+
+```powershell
+.\.venv\Scripts\python.exe src\run_ocr_vie_scan_pdf.py --manifest data\interim\vie\An_Nam_Chi_Nguyen\raw_manifest.json --lang vie
+```
+
+Nếu chưa có `tesseract` trong PATH, script sẽ báo lỗi rõ ràng và dừng (không tạo output OCR).
+
+---
+
+## 8) Text PDF staged pipeline (để chuẩn bị dóng hàng với tiếng Hán)
+
+Với PDF có **text layer** (ví dụ `data/vie/An_Nam_Chi_Luoc.pdf`) có thể xuất ra “rác stage” theo từng bước, và đặc biệt là một file **alignment input** có schema chung cho cả tiếng Việt (`lang=V`) và tiếng Hán (`lang=C`).
+
+Script: `src/run_extract_text_pdf_stages.py`
+
+Chạy cho tiếng Việt (An Nam Chí Lược), output vào `output/vie/an_nam_chi_luoc_stages`:
+
+```powershell
+.\.venv\Scripts\python.exe src\run_extract_text_pdf_stages.py `
+  --pdf data\vie\An_Nam_Chi_Luoc.pdf `
+  --out-dir output\vie\an_nam_chi_luoc_stages `
+  --file-id HVB_001 --lang V --domain H --sub-domain V --genre B --file-num 1 --chapter 1
+```
+
+Các file stage quan trọng:
+
+- `interim/stage_01_extract.json`: text blocks + bbox theo trang (raw).
+- `interim/stage_02_clean.json`: text đã clean theo trang.
+- `interim/stage_03_sentences.json`: câu + `STC_ID` theo trang.
+- `interim/stage_04_alignment_input.json`: **đầu vào dóng hàng**, schema:
+  - `{"file_id": "...", "lang": "V|C", "units": [{"stc_id","page","order","text"}...]}`
+
+Để dóng hàng với tiếng Hán tương ứng:
+
+1. Tạo thêm `stage_04_alignment_input.json` cho phía Hán (`lang=C`) với **cùng** `file_id`/`file_num`/`chapter` và cách đánh số `page`.
+2. Viết aligner đọc 2 file alignment_input (C/V), rồi align theo `page` (sau đó 1-1 hoặc m-n theo cosine/dict/DP).

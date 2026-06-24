@@ -1,0 +1,13 @@
+{
+  "pdf": "data\\vie\\An_Nam_Chi_Luoc.pdf",
+  "out_dir": "output\\vie\\an_nam_chi_luoc_stages",
+  "stages": {
+    "stage_01_extract": "output\\vie\\an_nam_chi_luoc_stages\\interim\\stage_01_extract.json",
+    "stage_02_clean": "output\\vie\\an_nam_chi_luoc_stages\\interim\\stage_02_clean.json",
+    "stage_03_sentences": "output\\vie\\an_nam_chi_luoc_stages\\interim\\stage_03_sentences.json",
+    "stage_04_alignment_input": "output\\vie\\an_nam_chi_luoc_stages\\interim\\stage_04_alignment_input.json"
+  },
+  "final_xml": "output\\vie\\an_nam_chi_luoc_stages\\final\\HVB_001.xml",
+  "pages": 170,
+  "sentences": 4154
+}
