@@ -11,7 +11,6 @@ from xml.etree import ElementTree as ET
 import fitz
 from openpyxl import Workbook
 
-
 SOURCE_PATTERN = re.compile(r"[\u4e00-\u9fff\u3400-\u4dbf\uf900-\ufaff]")
 LATIN_PATTERN = re.compile(r"[A-Za-zÀ-ỹà-ỹ]")
 SENTENCE_SPLIT_PATTERN = re.compile(r"(?<=[。！？!?；;:\n])\s+")
@@ -36,7 +35,9 @@ class AlignmentRecord:
     confidence: float
 
 
-def extract_text_pages(pdf_path: Path, max_pages: int | None = None) -> list[tuple[int, str]]:
+def extract_text_pages(
+    pdf_path: Path, max_pages: int | None = None
+) -> list[tuple[int, str]]:
     document = fitz.open(pdf_path)
     pages: list[tuple[int, str]] = []
     for page_index, page in enumerate(document, start=1):
@@ -166,19 +167,31 @@ def export_excel(alignments: list[AlignmentRecord], output_path: Path) -> None:
     worksheet.title = "alignment"
     worksheet.append(["STC_ID", "C", "V", "page", "confidence"])
     for item in alignments:
-        worksheet.append([item.stc_id, item.c_text, item.v_text, item.page, item.confidence])
+        worksheet.append(
+            [item.stc_id, item.c_text, item.v_text, item.page, item.confidence]
+        )
     workbook.save(output_path)
 
 
 def export_debug_json(sentences: list[SentenceRecord], output_path: Path) -> None:
     payload = [
-        {"index": item.index, "page": item.page, "order": item.order, "lang": item.lang, "text": item.text}
+        {
+            "index": item.index,
+            "page": item.page,
+            "order": item.order,
+            "lang": item.lang,
+            "text": item.text,
+        }
         for item in sentences
     ]
-    output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    output_path.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
 
 
-def build_sample(pdf_path: Path, output_dir: Path, page_start: int = 1, page_end: int | None = 3) -> None:
+def build_sample(
+    pdf_path: Path, output_dir: Path, page_start: int = 1, page_end: int | None = 3
+) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
 
     print(f"[1/4] Extracting text from {pdf_path.name}")
@@ -223,8 +236,15 @@ def resolve_pdf_path() -> Path:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Sample Hán-Việt corpus pipeline")
     parser.add_argument("--pdf", type=Path, default=None, help="PDF input path")
-    parser.add_argument("--output-dir", type=Path, default=Path("output/sample"), help="Output directory")
-    parser.add_argument("--page-start", type=int, default=1, help="First page to sample")
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=Path("output/sample"),
+        help="Output directory",
+    )
+    parser.add_argument(
+        "--page-start", type=int, default=1, help="First page to sample"
+    )
     parser.add_argument("--page-end", type=int, default=3, help="Last page to sample")
     return parser.parse_args()
 
@@ -232,7 +252,12 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
     pdf_path = args.pdf or resolve_pdf_path()
-    build_sample(pdf_path=pdf_path, output_dir=args.output_dir, page_start=args.page_start, page_end=args.page_end)
+    build_sample(
+        pdf_path=pdf_path,
+        output_dir=args.output_dir,
+        page_start=args.page_start,
+        page_end=args.page_end,
+    )
 
 
 if __name__ == "__main__":
