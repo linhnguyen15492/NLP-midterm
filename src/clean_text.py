@@ -1,3 +1,4 @@
+from os import path
 import re
 from typing import List
 
@@ -40,3 +41,18 @@ def clean_vietnamese_text(raw_text: str) -> str:
     text = re.sub(r"\s+", " ", text)
 
     return text.strip()
+
+
+def main():
+    input_path = "output/raw_text/viet.txt"
+    output_path = "output/cleaned_text/cleaned_viet.txt"
+    with open(input_path, "r", encoding="utf-8") as f:
+        raw_text = f.read()
+        cleaned_text = clean_vietnamese_text(raw_text)
+        print(cleaned_text)
+        with open(output_path, "w", encoding="utf-8") as out_f:
+            out_f.write(cleaned_text)
+
+
+if __name__ == "__main__":
+    main()
